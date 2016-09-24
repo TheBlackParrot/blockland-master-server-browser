@@ -1,0 +1,129 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700';
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 14pt;
+	line-height: 26px;
+	background-color: #44414f;
+	color: #e3d8d8;
+	min-width: 700px;
+}
+
+h1 {
+	font-size: 20pt;
+	font-weight: 700;
+	line-height: 36px;
+}
+
+.fa {
+	margin-right: 8px;
+}
+.fa-lock { color: #ffb141; }
+.fa-server { color: #7db5ea; }
+.fa-ban { color: #ed4d4a; }
+
+.wrapper {
+	padding: 24px;
+	width: calc(100% - 48px);
+}
+.section {
+	margin-bottom: 18px;
+	line-height: 36px;
+}
+
+select {
+	background: #33313f;
+	color: #e3d8d8;
+	border: 0;
+	outline: 0;
+	padding: 4px;
+	font-size: 14pt;
+	font-family: "Roboto", sans-serif;
+	margin-top: 8px;
+}
+
+.check {
+	display: inline-block;
+	min-width: 150px;
+}
+.check:last-child {
+	width: auto;
+}
+
+.button {
+	text-transform: uppercase;
+	padding: 4px 16px 4px 16px;
+	background: #33313f;
+	color: #e3d8d8;
+	display: inline-block;
+	font-weight: 700;
+}
+
+.button:hover {
+	background: #55515f;
+}
+.button:active {
+	background: #e3d8d8;
+	color: #33313f;
+}
+.button-disabled {
+	background: #33313f !important;
+	color: #e3d8d8 !important;
+	opacity: 0.33;
+}
+
+.servers {
+	margin-top: 36px;
+}
+.server {
+	width: calc(100% - 16px);
+	background-color: #22212f;
+	padding: 8px 8px 4px 8px;
+	margin-bottom: 18px;
+}
+.locked { border-left: 4px solid #ff0; }
+.server h2 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-variant: small-caps;
+	font-weight: 700;
+	font-size: 20pt;
+}
+.server .top * {
+	display: inline-block;
+}
+.server .top {
+	border-bottom: 1px solid #55515f;
+	padding-bottom: 4px;
+}
+.server:hover {
+	transition: .1s;
+	background-color: #33313f;
+}
+.server-full {
+	background-color: #22212f !important;
+}
+
+.server-players {
+	float: right;
+	font-style: italic;
+}
+
+.server-details {
+	font-size: 10pt;
+	table-layout: fixed;
+	width: 100%;
+	margin-top: 4px;
+}
+.server-details .row-head {
+	font-size: 12pt;
+	font-weight: 700;
+}
+.server-details .row-value {
+	text-align: right;
+}
+.server-details tr td {
+	width: 25%;
+}
+.server-details tr td:nth-child(2) { padding-right: 16px; }
+.server-details tr td:nth-child(3) { padding-left: 16px; }
+.server-details .port { opacity: 0.5; }

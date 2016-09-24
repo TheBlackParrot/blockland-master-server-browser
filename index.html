@@ -1,0 +1,76 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/spinner.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="section">
+			<h1>Hide servers that are:</h1>
+			<div class="check">
+				<input type="checkbox" name="full" id="full"/>
+				<label for="full">Full</label>
+			</div>
+			<div class="check">
+				<input type="checkbox" name="empty" id="empty" checked/>
+				<label for="empty">Empty</label>
+			</div>
+			<div class="check">
+				<input type="checkbox" name="locked" id="locked"/>
+				<label for="locked">Locked</label>
+			</div>
+		</div>
+
+		<div class="section">
+			<h1>Sort servers by:</h1>
+			<select name="sortby" id="sortby">
+				<option value="ip">IP Address</option>
+				<option value="port">Port Number</option>
+				<option value="locked">Locked/Passworded</option>
+				<option value="dedicated">Dedicated</option>
+				<option value="name">Server Name</option>
+				<option value="players" selected>Players Online</option>
+				<option value="gamemode">Gamemode</option>
+				<option value="bricks">Bricks</option>
+			</select>
+		</div>
+
+		<div class="section">
+			<h1>Order</h1>
+			<div class="check">
+				<input type="radio" name="order" id="asc" value="asc"/>
+				<label for="asc">Ascending</label>
+			</div>
+			<div class="check">
+				<input type="radio" name="order" id="desc" value="desc" checked/>
+				<label for="desc">Descending</label>
+			</div>			
+		</div>
+
+		<div class="section">
+			<div class="button" id="refresh-button">Refresh</div>
+		</div>
+
+		<div class="servers" style="display: none;">
+		</div>
+
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+
+	<iframe id="joinTrigger" style="display: none;"></iframe>
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+</body>
+
+</html>
