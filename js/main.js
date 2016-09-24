@@ -42,7 +42,7 @@ function getServerElement(data) {
 		element.addClass("server-full");
 	}
 
-	title_element.append(data.name);
+	title_element.append($('<span class="host-name">' + data.parsed_name.host + '\'s</span> <span class="server-name">' + data.parsed_name.server + '</span>'));
 
 	var players_element = $('<span class="server-players"></span>');
 	players_element.text(data.players.count + " / " + data.players.max + " online");

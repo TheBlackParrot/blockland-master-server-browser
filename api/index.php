@@ -22,6 +22,19 @@
 
 		$parts = split("\t", $line);
 		$parts = array_map('utf8_encode', $parts);
+
+		$parsed_names = [];
+		
+		$to_parse = "'s";
+		$parse_offset = 0;
+		if(stripos($parts[4], $to_parse) == false) {
+			// hoo boy improper grammar
+			$to_parse = "s'";
+			$parse_offset = 1;
+		}
+
+		$parsed_names["host"] = substr($parts[4], 0, stripos($parts[4], $to_parse)+$parse_offset);
+		$parsed_names["server"] = trim(substr($parts[4], stripos($parts[4], $to_parse)+2));
 		
 		$arr["{$parts[0]}:{$parts[1]}"] = [
 			"ip" => $parts[0],
@@ -34,7 +47,8 @@
 				"max" => $parts[6]
 			],
 			"gamemode" => $parts[7],
-			"bricks" => $parts[8]
+			"bricks" => $parts[8],
+			"parsed_name" => $parsed_names
 		];
 	}
 

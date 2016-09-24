@@ -102,6 +102,9 @@ select {
 .server-full {
 	background-color: #22212f !important;
 }
+.server .host-name {
+	opacity: 0.66;
+}
 
 .server-players {
 	float: right;
